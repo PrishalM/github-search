@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: #39304a;
+
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  color: #39304a;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #b0a990;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #202030;
+}
+
+nav a {
+  padding: 1rem;
+  cursor: pointer;
+  color: #202030;
+  text-decoration: underline;
+}
+
+nav .active {
+  font-weight: bold;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  cursor: pointer;
+  color: #202030;
+  text-decoration: underline;
+}
+
+.show-repo {
+  cursor: pointer;
+  color: #39304a;
+  text-decoration: underline;
+}
+
+.forks,
+.repoLink,
+.description {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #d7d4c7;
+  background-color: #d7d4c7;
+}
+
+input:active,
+input:hover {
+  border: 1px solid #39304a;
+  background-color: #d7d4c7;
+}
+
+button {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #39304a;
+  background-color: #39304a;
+  color: #d7d4c7;
+  margin-left: 5px;
+}
+
+button:active,
+button:hover {
+  border: 1px solid #39304a;
+  background-color: #d7d4c7;
+  color: #39304a;
+}
