@@ -1,32 +1,32 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ShowRepo } from "../../components";
+import { Repo } from "../../components";
 
 const RepoPage = () => {
-  const { full_name, repo_name } = useParams();
-  const [showData, setShowData] = useState([]);
+  const { git_name, repo_name } = useParams();
+  const [repoData, setRepoData] = useState([]);
 
   useEffect(() => {
-    async function getShowData(full_name, repo_name) {
+    async function getRepoData(git_name, repo_name) {
       try {
         const result = await axios.get(
-          `https://api.github.com/repos/${full_name}/${repo_name}`
+          `https://api.github.com/repos/${git_name}/${repo_name}`
         );
-        setShowData(result.data);
+        setRepoData(result.data);
       } catch (err) {
         console.error(err);
       }
     }
-    getShowData(full_name, repo_name);
+    getRepoData(git_name, repo_name);
   }, []);
 
   return (
-    <ShowRepo
+    <Repo
       name={repo_name}
-      forkCount={showData.forks_count}
-      description={showData.description}
-      repoUrl={showData.html_url}
+      forkCount={repoData.forks_count}
+      description={repoData.description}
+      repoUrl={repoData.html_url}
     />
   );
 };

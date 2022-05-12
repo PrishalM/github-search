@@ -1,1 +1,1 @@
-export { default as ShowRepo } from "./ShowRepo";
+export { default as Repo } from "./Repo";

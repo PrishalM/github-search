@@ -1,7 +1,7 @@
 /** @jest-environment jsdom */
 
 import { screen } from "@testing-library/react";
-import ShowRepo from ".";
+import Repo from ".";
 import { MemoryRouter } from "react-router-dom";
 
 const fakeShow = {
@@ -11,11 +11,11 @@ const fakeShow = {
   image: "",
 };
 
-describe("ShowRepo", () => {
+describe("Repo", () => {
   beforeEach(() => {
     render(
       <MemoryRouter>
-        <ShowRepo
+        <Repo
           name={fakeShow.name}
           summary={fakeShow.summary}
           rating={fakeShow.rating}

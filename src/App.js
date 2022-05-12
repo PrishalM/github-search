@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { SearchPage, RepoPage, NotFoundPage } from "./pages";
+import { SearchPage, UserPage, RepoPage, NotFoundPage } from "./pages";
 
 import { default as Layout } from "./layouts";
 
@@ -12,7 +12,8 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<SearchPage />} />
-        <Route path=":full_name/:repo_name" element={<RepoPage />} />
+        <Route path=":git_name" element={<UserPage />} />
+        <Route path=":git_name/:repo_name" element={<RepoPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
